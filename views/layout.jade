@@ -1,0 +1,37 @@
+doctype html
+html(ng-app="myApp")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    title #{title}
+    meta(name="description" content="map")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet",href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css") 
+    link(rel="stylesheet",href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css") 
+    link(rel="stylesheet", href="css/toaster.css")
+    link(rel="stylesheet/less",type="text/css", href="css/app.less")
+    body(ng-controller="MainCtrl") 
+        ajax-loading 
+        block content
+
+
+script(src="http://maps.googleapis.com/maps/api/js?libraries=geometry,places&amp;sensor=false") 
+script(src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js") 
+
+script(type='text/javascript'). 
+    var jQuery = jQuery.noConflict( true ); 
+     
+script(src="js/libraries/less-1.6.1.min.js") 
+script(src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js") 
+script(src="//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js") 
+script(src="lib/angular/angular.min.js")   
+script(src="lib/angular/angular-route.min.js")  
+script(src="lib/angular/angular-animate.min.js") 
+script(src="js/services.js")    
+script(src="js/controllers.js")    
+script(src="js/filters.js")    
+script(src="js/directives.js")  
+script(src="js/modules/ui-bootstrap-tpls-0.9.0.min.js") 
+script(src="js/modules/toaster.js") 
+script(src="js/googleMapsSrv.js") 
+script(src="js/app.js") 

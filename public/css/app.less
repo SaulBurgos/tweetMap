@@ -1,0 +1,155 @@
+.guideLine {
+  border: 1px dashed gray;
+}
+
+#loadingAjax {
+	/* position: absolute;*/
+	background: 0;
+	filter: Alpha(Opacity=18);
+	opacity: .45;
+	width: 46px;
+	height: 46px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 101;
+}
+
+/* start code to full map*/
+html {
+  height: 100%
+}
+
+body {
+   height: 100%;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+#mainMap {
+ width: 100%;
+ height: 100%;
+}
+
+/* start code to position element over map*/
+.overMap {
+  position: absolute;
+  z-index: 100;
+}
+
+.overMap-topCenter {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.overMap-topLeft {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.overMap-topRight {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.overMap-bottomCenter {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.overMap-bottomRight {
+  right: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.overMap-bottomLeft {
+  bottom: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.overMap-centerAll {
+    top: 0;
+  bottom: 0;
+  left: 0;
+  right:0;
+  margin: auto;
+}
+
+.overMap-centerLeft {
+    top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.overMap-centerRight {
+    top: 0;
+  bottom: 0;
+  right:0;
+  margin: auto;
+}
+
+#boxSearch {
+    width:70%;
+    max-height: 100px;
+    
+    .panel {
+        box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.61);
+        margin-top:10px;
+        margin-bottom:10px;
+    }
+    
+    .panel-body {
+        padding: 7px;
+    }
+}
+
+#tweetBox {
+    width:100%;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    max-height:40%;
+    
+    .panel {
+        display:none;
+        margin:0px;
+        overflow: hidden;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .panel-body {
+        padding: 5px;
+        height:300px;
+    }
+    .media-list {
+        margin: 0px;
+    }
+    .media {
+        margin-top: 3px;
+        padding-bottom: 3px;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.26);
+    }
+   
+}
+
+/*ng-class=" { 'tweetBox-open': openTweetsBox  } "*/
+
+

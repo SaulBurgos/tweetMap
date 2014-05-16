@@ -1,0 +1,63 @@
+<div id="boxSearch" class="row overMap overMap-topCenter"> 
+    
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="input-group">
+                    <input type="text" name="hashtags" ng-model="searchBox.hashtags" 
+                     class="form-control" placeholder="Write one #hashtag or left empty to get all tweets" ng-disabled="streamOn">                    
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" ng-click="getTweets()" ng-disabled="streamOn">
+                            <span class="glyphicon glyphicon-search"></span> 
+                        </button>
+                    </span>
+                </div>
+                
+                <div style="margin-top:5px;" ng-show="streamOn">
+                    <button type="button" class="btn btn-sm btn-danger btn-block" ng-click="stopTweets()">Stop (receiving tweets..)</button>
+                    <div class="text-center" style="font-size:12px;">
+                        <a href="http://saulburgos.com/" target="_blank">
+                            By Saul Burgos
+                        </a>
+                    </div>
+                </div>                
+            </div>
+        </div>    
+    </div>
+    
+</div>
+
+<div id="tweetBox" >
+   <div>
+       <button type="button" class="btn btn-warning btn-sm" ng-click="toogleTweetsBox()">
+           <b>Open/hide</b>
+           <img	src="img/twitter.png" height="16" />
+       </button>
+    </div>
+    <div class="panel panel-default">
+        
+        <div class="panel-body" >  
+            
+            <ul class="media-list">
+                <li class="media" ng-repeat="tweet in tweets | reverseTweetsFilter">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" ng-src="{{ tweet.user.image }}" height="54" width="54" >
+                    </a>
+                    <div class="media-body">                       
+                        {{ tweet.text }} by <b>@{{ tweet.user.twitterUser }}</b>
+                    </div>
+                </li>               
+                <li class="media" ng-show="tweets.length == 0">
+                    <a class="pull-left" href="#" ng-show="streamOn">
+                        <img class="media-object" src="img/ajaxloader.gif" >
+                    </a>
+                    <div class="media-body text-center">                       
+                       <b>Here is where all the tweets will be placed</b>
+                    </div>
+                </li>              
+            </ul>          
+            
+        </div>
+    </div>    
+   
+</div>
